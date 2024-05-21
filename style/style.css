@@ -15,39 +15,108 @@
     src: url(fonts/YesevaOne-Regular.ttf);
 }
 
-:root {
+* {
+    margin: 0;
+    padding: 0;
+
     --fontetitulo: 'yesevaone';
     --fontepadrao: 'signika';
     --fonteextra: 'amatic';
 }
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
-header {
+header.navbar {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #fff;
+    box-shadow: 2px 4px 10px #00000048;
     height: 60px;
-    text-align: center;
+    margin-top: -65px;
     padding: .2vw;
+    z-index: 99;
 }
 
-nav {
+.open-menu {
+    position: fixed;
+    cursor: pointer;
+    z-index: -10;
+    top: 15px;
+    right: 3%;
+}
+
+.close-menu {
     position: absolute;
-    top: 1.2vw;
-    right: 2.8vw;
+    cursor: pointer;
+    top: 15px;
+    right: 7.5%;
+    background-color: #f2f2f2;
 }
 
-nav img {
-    height: 30px;
-    width: auto;
+.menu svg, .open-menu > svg {
+    transition: .4s;
+}
+
+.menu svg {
+    fill: #000;
+}
+
+.menu svg:hover {
+    fill: #D18800;
+}
+
+.menu {
+    position: fixed;
+    flex-direction: column;
+    justify-content: center;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    width: 40%;
+    z-index: 1000;
+    background-color: #f2f2f2;
+    box-shadow: 2px 4px 10px #00000056;
+    transition: all 0.4s ease-in-out;
+}
+
+.nav-links-mobile {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1.2rem;
+    margin-top: 75px;
+    font-family: var(--fontepadrao);
+}
+
+.nav-links-mobile a {
+    text-transform: uppercase;
+    font-size: 5em;
+}
+
+.menu a {
+    font-size: 1.8em;
+    text-decoration: none;
+    color: #282e2d;
+}
+
+#check {
+    display: none;
+}
+
+#check:checked ~ .menu {
+    right: 0;
 }
 
 img.vela01 {
+    margin-left: 50%;
+    transform: translate(-50%);
     width: 55px;
     height: auto;
 }
+
+section#principal {margin-top: 65px;}
 
 section#principal > div.texto {
     display: flex;
@@ -57,8 +126,7 @@ section#principal > div.texto {
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
-    box-shadow: inset 0px 30px 50px rgba(0, 0, 0, 0.623);
-    margin: 0% 3% 3%;
+    box-shadow: inset 0px 30px 50px rgba(0, 0, 0, 0.664);
     height: 85vh;
 }
 
@@ -91,7 +159,6 @@ section.container01 {
     background-color: #C26440;
     background-image: linear-gradient(62deg, #ec845a 0%, #e77e55 100%);   
     margin: 6% 0%;
-    border-radius: 5px 5px 0px 0px;
 }
 
 .quemsomos-texto {
@@ -106,7 +173,7 @@ section.container01 {
 .container01 h3 {
     display: flex;
     font-family: var(--fonteextra);
-    font-size: 5.5em;
+    font-size: 5em;
     color: #f2f2f2;
     text-shadow: 1px 1px 4px #00000017;
     justify-content: flex-start;
@@ -160,7 +227,7 @@ section.container01 {
 }
 
 .container02 {
-    height: 95vh;
+    height: 90vh;
     background-color: #3a3939;
     background-image: url(../imagens/sixteen-miles-out-iSyyY1GfYSw-unsplash.jpg);
     background-position: center;
@@ -348,11 +415,13 @@ div.mais-produtos > div {
 .shipping-texto > h3 {
     font-family: var(--fontetitulo);
     font-size: 2rem;
+    font-weight: normal;
 }
 
 .shipping-texto > p {
     font-family: var(--fontepadrao);
     font-size: 1.4rem;
+    font-weight: 100;
 }
 
 .shipping > svg {
@@ -588,7 +657,7 @@ ul a, .texto-footer > p, .container-footer svg, .caixas-copyright {
 
 .car-fade {
     transform: translateX(-500px);
-    transition: ease-in-out 2s;
+    transition: ease-out 2s;
     transition-delay: 200ms;
 }
 
