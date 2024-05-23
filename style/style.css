@@ -54,16 +54,14 @@ header.navbar {
     background-color: #f2f2f2;
 }
 
-.menu svg, .open-menu > svg {
-    transition: .4s;
-}
+.menu svg, .open-menu > svg {transition: .4s;}
 
 .menu svg {
     fill: #000;
 }
 
 .menu svg:hover {
-    fill: #D18800;
+    transform: scale(1.2);
 }
 
 .menu {
@@ -396,7 +394,7 @@ div.mais-produtos > div {
     height: 200px;
     background-color: #C26440;
     color: #F2F2F2;
-    text-shadow: 1px 2px 10px #00000010;
+    text-shadow: 2px 4px 8px #00000010;
 }
 
 .shipping {
@@ -425,6 +423,7 @@ div.mais-produtos > div {
 }
 
 .shipping > svg {
+    fill: #F2F2F2;
     padding: 25px;
     width: 40px;
     height: 40px;
@@ -568,8 +567,8 @@ ul a, .texto-footer > p, .container-footer svg, .caixas-copyright {
     color: #D18800;
 }
 
-/* Elementos animados */
 
+/* Elementos animados */
 
 .fadeup-hdr {
     opacity: 0;
