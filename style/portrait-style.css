@@ -1,5 +1,28 @@
 @charset "UTF-8";
 
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    position: relative;
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) {  
+    .menu {
+        width: 80%;
+        margin-top: 70px;
+    }
+}
+
+ul.nav-links-mobile {
+    margin-top: 60px;
+}
+
+ul.nav-links-mobile a {
+    font-size: 1.5em;
+}
+
 div.quote {
     width: 100%;
     align-items: center;
