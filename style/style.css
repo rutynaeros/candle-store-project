@@ -51,7 +51,7 @@ header.navbar {
     cursor: pointer;
     top: 15px;
     right: 7.5%;
-    background-color: #f2f2f2;
+    background-color: #fff;
 }
 
 .menu svg, .open-menu > svg {transition: .4s;}
@@ -69,11 +69,14 @@ header.navbar {
     flex-direction: column;
     justify-content: center;
     top: 0;
+    margin-top: 75px;
+    margin-right: 10px;
+    border-radius: 10px;
     right: -100%;
-    height: 100%;
+    height: 60%;
     width: 40%;
     z-index: 1000;
-    background-color: #f2f2f2;
+    background-color: #ffff;
     box-shadow: 2px 4px 10px #00000056;
     transition: all 0.4s ease-in-out;
 }
@@ -131,15 +134,14 @@ section#principal > div.texto {
 div.quote {
     display: flex;
     flex-direction: column;
-    margin-left: 3%;
+    margin: 0 3% 0 3%;
 }
 
 section#principal h2 {
     font-family: var(--fontetitulo);
     color: #fffafa;
     text-shadow: 1px 1px 6px #00000017;
-    font-size: 3.5vw;
-    width: 50%;
+    font-size: 3em;
 }
 
 blockquote {
@@ -148,7 +150,7 @@ blockquote {
     font-family: var(--fonteextra);
     color: #fffafa;
     text-shadow: 1px 1px 2px #00000017;
-    font-size: 1.8vw;
+    font-size: 1.5em;
     padding-top: 14px;
     font-family: 'amatic';
 }
@@ -164,18 +166,22 @@ section.container01 {
     padding: 3% 3%;
     flex-direction: row;
     align-items: center;
-    max-width: 1000px;
+    justify-content: center;
+    max-width: 1100px;
     margin: auto;
 }
 
-.container01 h3 {
+.quemsomos-texto > .quemsomos-titulo {
     display: flex;
+    flex-direction: row;
+}
+
+.quemsomos-titulo > h3 {
     font-family: var(--fonteextra);
-    font-size: 5em;
     color: #f2f2f2;
     text-shadow: 1px 1px 4px #00000017;
-    justify-content: flex-start;
-    width: 800px;
+    font-size: 5em;
+    padding: 10px;
 }
 
 .container01 p {
@@ -183,8 +189,8 @@ section.container01 {
     font-size: 1em;
     line-height: 1.1em;
     color: #f2f2f2;
-    height: 100%;
     padding: 5px;
+    margin: 0px 30px 0px 30px;
     text-shadow: 1px 1px 4px #00000017;
     text-align: center;
 }
@@ -201,12 +207,14 @@ section.container01 {
     border-radius: 10px 0px ;
 }
 
-.container01 a {
+.quemsomos-link {
     display: flex;
-    text-align: center;
-    align-items: flex-end;
-    width: 365px;
-    margin: auto;
+    justify-content: center;
+}
+
+.container01 a {
+    display: inline-block;
+    font-family: var(--fontepadrao);
     margin-top: 2em;
     text-decoration: none;
     background-color: #fff;
@@ -251,7 +259,7 @@ section.container02 div.texto02 {
 
 div.texto02 h3 {
     font-family: var(--fontetitulo);
-    font-size: 6.5vw;
+    font-size: 5.5em;
     color: #fffafa;
     text-shadow: 1px 1px 6px #00000017;
     text-align: center;
@@ -265,7 +273,7 @@ div.texto02 .conhecer {
     background-color: #D18800;
     border-radius: 6.5px;
     font-family: var(--fontepadrao);
-    font-size: 1.6vw;
+    font-size: 1.3em;
     font-weight: bolder;
     letter-spacing: 2px;
     padding: 13px 18px;
@@ -299,8 +307,8 @@ div.titulo-produtos {
 div.mais-produtos {
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 10px 10px 90px 10px;
-    margin: 10px 10px 0px 10px;
     max-width: 1250px;
     margin: auto;
 }
@@ -391,10 +399,14 @@ div.mais-produtos > div {
 }
 
 .container04 > div.shipping {
-    height: 200px;
+    padding: 50px 0px 50px 0px;
     background-color: #C26440;
     color: #F2F2F2;
     text-shadow: 2px 4px 8px #00000010;
+}
+
+@media screen and (max-width: 796px) {
+    .container04 > div.shipping {padding: 0;}
 }
 
 .shipping {
@@ -462,11 +474,16 @@ div.fale-conosco h3 {
 }
 
 div.duvida {
+    display: flex;
     padding: 10px;
     margin: auto;
     font-size: 1.5rem;
     font-family: var(--fontetitulo);
     color: #282e2d;
+}
+
+div.duvida > h2 {
+    text-align: center;
 }
 
 div.duvida-texto {
@@ -511,7 +528,6 @@ div.duvida-texto {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 200px;
     background-color: #e0e4e4;
     box-shadow: 1px 1px 6px #0000003d;
 }
@@ -567,9 +583,26 @@ ul a, .texto-footer > p, .container-footer svg, .caixas-copyright {
     color: #D18800;
 }
 
+/* Media Query - Configurações pontuais */
+@media screen and (min-width: 770px) and (max-width: 1000px) {
+    .bg-content > h3 {font-size: 12px;}
+
+    .quemsomos-texto {flex-wrap: wrap;}
+}
+
+@media screen and (min-width: 768px) {
+    section#principal h2 {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .shipping > svg {
+        padding: 15px 5px 5px 5px;
+    }
+}
 
 /* Elementos animados */
-
 .fadeup-hdr {
     opacity: 0;
     transform: translateY(100px);

@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+div.quote {
+    width: 100%;
+    align-items: center;
+}
+
+section#principal div.texto {
+    background-size: cover;
+    text-align: center;
+    font-size: 11px;
+    padding: 6%;
+}
+
+.quemsomos-texto {
+    flex-wrap: wrap;
+    font-size: 1em;
+}
+
+.quemsomos-texto p {margin: 0px;}
+
+.quemsomos-texto span {
+    padding: 0;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+
+div.quemsomos-link > a {
+    font-size: 18px;
+    letter-spacing: .1em;
+    margin-bottom: 1.5em;
+}
+
+.container02 {
+    height: 80vh;
+}
+
+.container02 div.texto02 {
+    font-size: 10px;
+}
+
+div.mais-produtos {
+    flex-direction: column;
+    padding: 0;
+}
+
+div.mais-produtos {
+    padding: 40px 20px 80px 20px;
+}
+
+div.mais-produtos > .parent {
+    width: 100%;
+    height: 250px;
+}
+
+.container04 > div.shipping {
+    flex-direction: column;
+    padding-bottom: 25px;
+}
+
+div.shipping-texto > h3 {
+    text-align: center;
+    font-size: 1.7em;
+}
+
+div.shipping-texto > p {
+    text-align: center;
+    font-size: 1em;
+}
+
+.container04 > div.shipping > a {
+    display: none;
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+    .container05 .duvida-texto {
+        width: 100%;
+    }
+}
+
+.container-footer {
+    flex-wrap: wrap;
+}
